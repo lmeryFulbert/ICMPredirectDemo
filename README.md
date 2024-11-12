@@ -8,6 +8,7 @@ vagrant up
 dans 3 terminal différents
 ```bash
 vagrant ssh client
+```
 ```bash
 vagrant ssh fakerouter
 ```
