@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # TP ICMP Redirect
 
 1.   Clonez ce repository dans votre répertoire de travail.
@@ -9,25 +7,11 @@ git clone https://github.com/lmeryFulbert/ICMPredirectDemo.git
 ```
 
 2.   Vérifiez que le logiciel Vagrant est bien installé.
-=======
-# TP ICMP Redirec
-
-Cloner ce repository dans votre répertoire de travail.
-```bash
-git clone 
-```
-
-Vérifier que le logiciel vagrant est bien installé.
->>>>>>> 4e520b42dc2b68c12d76052f6f17c4c80c74ca62
 
 ```bash
 vagrant --version
 ```
-
-<<<<<<< HEAD
 3.   Lancez l'environnement de machines virtuelles.
-=======
->>>>>>> 4e520b42dc2b68c12d76052f6f17c4c80c74ca62
 
 ```bash
 vagrant up
