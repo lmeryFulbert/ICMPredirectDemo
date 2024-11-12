@@ -1,4 +1,17 @@
-# ICMPredirectDemo
+# TP ICMP Redirec
+
+Cloner ce repository dans votre répertoire de travail.
+```bash
+git clone 
+```
+
+Vérifier que le logiciel vagrant est bien installé.
+
+```bash
+vagrant --version
+```
+
+
 ```bash
 vagrant up
 ```
