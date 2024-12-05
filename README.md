@@ -10,14 +10,14 @@ git clone https://github.com/lmeryFulbert/ICMPredirectDemo.git
 
 ```bash
 vagrant --version
-
+```
 
 3.   Se placer dans le dossier du dépot
 
 ```bash
 cd ICMPredirectDemo
-
 ```
+
 4.   Lancez l'environnement de machines virtuelles.
 
 ```bash
