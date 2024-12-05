@@ -45,7 +45,7 @@ Vagrant.configure("2") do |config|
         client.vm.provision "shell", inline: <<-SHELL
             # Définir la gateway
             ip route delete default || true
-            ip route add default via 192.168.255.254
+            ip route add default via 192.168.56.254
             echo "Default route modified..."
             # Install TCPDump
             sudo apt update
