@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
 
     # VM3 : Routeur
     config.vm.define "routeur" do |routeur|
-        routeur.vm.network "private_network", ip: "192.168.255.100" # Interface LAN
+        routeur.vm.network "private_network", ip: "192.168.56.100" # Interface LAN
         routeur.vm.network "public_network"
         routeur.vm.hostname = "routeur"
     
@@ -32,10 +32,10 @@ Vagrant.configure("2") do |config|
   
     # VM1 : Client
     config.vm.define "client" do |client|
-        client.vm.network "private_network", ip: "192.168.255.10"
+        client.vm.network "private_network", ip: "192.168.56.10"
         client.vm.hostname = "client"
 
-        #client.vm.synced_folder "./capture", "/home/vagrant/capture"
+        client.vm.synced_folder "./capture", "/home/vagrant/capture"
         # Définir la taille de la mémoire (en Mo)
         client.vm.provider "virtualbox" do |vb|
             vb.memory = 512  # 512 Mo de RAM
@@ -56,7 +56,7 @@ Vagrant.configure("2") do |config|
   
     # VM2 : Serveur
     config.vm.define "fakerouter" do |fakerouter|
-        fakerouter.vm.network "private_network", ip: "192.168.255.254"
+        fakerouter.vm.network "private_network", ip: "192.168.56.254"
         fakerouter.vm.hostname = "fakerouter"
 
         # Définir la taille de la mémoire (en Mo)
@@ -67,7 +67,7 @@ Vagrant.configure("2") do |config|
         # Définir la gateway
         fakerouter.vm.provision "shell", inline: <<-SHELL
             ip route delete default || true
-            ip route add default via 192.168.255.100
+            ip route add default via 192.168.56.100
 
             # Activer le routage IP
             echo "net.ipv4.ip_forward=1" >> /etc/sysctl.conf
