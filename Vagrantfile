@@ -35,7 +35,7 @@ Vagrant.configure("2") do |config|
         client.vm.network "private_network", ip: "192.168.255.10"
         client.vm.hostname = "client"
 
-        client.vm.synced_folder "./capture", "/home/vagrant/capture"
+        #client.vm.synced_folder "./capture", "/home/vagrant/capture"
         # Définir la taille de la mémoire (en Mo)
         client.vm.provider "virtualbox" do |vb|
             vb.memory = 512  # 512 Mo de RAM
