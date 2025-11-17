@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
                 ip route add default via 172.16.117.254
                 echo "Default route modified..."
     
-                # Activer le routage IP
+                # Accepter ICMP Redirect (par défaut c'est secure)
                 sysctl -w net.ipv4.conf.all.send_redirects=1
                 echo "ICMPRedirect enabled..."
 
@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
       # Provisionnement par shell
         client.vm.provision "shell", inline: <<-SHELL
 
-            # Install TCPDump
+            # Install TCPDump avant modif gateway
             sudo apt update
             sudo apt install -y tcpdump
             echo "tcpdump installed..."
@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
             ip route add default via 192.168.99.254
             echo "Default route modified..."
 
-            # Activer le routage IP
+            # Accepter ICMP Redirect (par défaut c'est secure)
             sysctl -w net.ipv4.conf.all.send_redirects=1
             echo "ICMPRedirect enabled..."
 
