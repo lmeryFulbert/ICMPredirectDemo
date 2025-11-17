@@ -24,6 +24,8 @@ cd ICMPredirectDemo
 vagrant up
 ```
 
+Attention: On vous demandera quelle interface il faut associer au bridge, choisissez le bon adaptateur réseau (celui qui est connecté à internet)
+
 ## Connexion aux VM via SSH
 
 4.   Dans **3 terminaux différents**, faites :
